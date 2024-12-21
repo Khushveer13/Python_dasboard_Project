@@ -1,20 +1,20 @@
 def main():
-   
+   #Dictionary to store user friends
     user_friends = {}
 
-   
+   #input user data
     n = int(input("Enter the number of users: "))
     for _ in range(n):
         user = input("Enter user name: ")
         friends = input(f"Enter friends of {user} (comma-separated): ").split(",")
         user_friends[user] = set(friend.strip() for friend in friends)
 
-   
+   #Display users and their friends 
     print("\nUser data:")
     for user, friends in user_friends.items():
         print(f"{user}: {friends}")
 
-   
+   #Calculating interections and unions
     print("\nMenu:")
     print("1. Find all friends (Union)")
     print("2. Find common friends among all users (Intersection)")
